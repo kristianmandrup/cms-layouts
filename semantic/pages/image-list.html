@@ -9,6 +9,8 @@
 
   <!-- Site Properities -->
   <title>Manticore CMS</title>
+  <script src="../../node_modules/dropzone/dist/min/dropzone.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../node_modules/dropzone/dist/min/dropzone.min.css"/>
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../dist/semantic.min.js"></script>
   <script src="home/page.js"></script>
@@ -75,16 +77,16 @@
           <div class="ui positive message">
             Your image list is valid
           </div>
+          <div class="ui hidden divider"></div>
+          <form id="drop-images" action="/file-upload" class="dropzone">
+            <div class="fallback">
+              <input name="file" type="file" multiple />
+            </div>
+          </form>
+          <div class="ui hidden divider"></div>
           <form class="ui form">
             <div class="field">
               <input type="text" name="name" placeholder="Name">
-            </div>
-            <div class="field">
-              <select name="images" multiple="" class="ui dropdown">
-                <option value="">Images</option>
-                <option value="top-banner">Top banner</option>
-                <option value="side-banner">Side banner</option>
-              </select>
             </div>
             <button class="ui button" type="submit">Submit</button>
           </form>

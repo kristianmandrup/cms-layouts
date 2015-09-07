@@ -10,10 +10,13 @@
   <!-- Site Properities -->
   <title>Manticore CMS</title>
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/dropzone/dist/min/dropzone.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../node_modules/dropzone/dist/min/dropzone.min.css"/>
   <script src="../dist/semantic.min.js"></script>
   <script src="home/page.js"></script>
   <link rel="stylesheet" type="text/css" class="ui" href="../dist/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="home/page.css"/>
+
 </head>
 <body>
 
@@ -75,32 +78,18 @@
           <div class="ui positive message">
             Your image is valid
           </div>
+          <script type="text/javascript">
+            // Alternative to DropZone any element!
+            // $("div#myId").dropzone({ url: "/file/post" });
+          </script>
+          <form id="drop-images" action="/file-upload" class="dropzone">
+            <div class="fallback">
+              <input name="file" type="file" multiple />
+            </div>
+          </form>
           <form class="ui form">
             <div class="field">
               <input type="text" name="name" placeholder="Name">
-            </div>
-            <div class="field">
-              <input type="text" name="title" placeholder="Title">
-            </div>
-            <div class="field">
-              <select name="categories" multiple="" class="ui dropdown">
-                <option value="">Categories</option>
-                <option value="ad">Ad</option>
-                <option value="article">Article</option>
-              </select>
-            </div>
-            <div class="field">
-              <select name="tags" multiple="" class="ui dropdown">
-                <option value="">Tags</option>
-                <option value="banner">banner</option>
-                <option value="story">story</option>
-              </select>
-            </div>
-            <div class="field">
-              <textarea name="content" placeholder="Content"></textarea>
-            </div>
-            <div class="field">
-              <textarea name="description" placeholder="Description"></textarea>
             </div>
             <button class="ui button" type="submit">Submit</button>
           </form>

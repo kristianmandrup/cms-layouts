@@ -21,11 +21,13 @@
     "npm": ">=1.4.3"
   },
   "scripts": {
-    "start": "open semantic/pages/cms.html"
+    "start": "node ."
   },
   "dependencies": {
     "better-console": "^0.2.4",
     "del": "^2.0.1",
+    "dropzone": "^4.0.1",
+    "express": "^4.13.3",
     "extend": "^3.0.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.1",
