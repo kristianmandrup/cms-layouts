@@ -10,6 +10,7 @@
   <!-- Site Properities -->
   <title>Manticore CMS</title>
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/sortablejs/Sortable.min.js"></script>  
   <script src="../../node_modules/dropzone/dist/min/dropzone.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../../node_modules/dropzone/dist/min/dropzone.min.css"/>
   <script src="../dist/semantic.min.js"></script>
@@ -71,24 +72,74 @@
     </div>
   </div>
 
+  <script type="text/javascript">
+  $(function() {
+    // Grouping
+    var groups = {};
+    groups.a = document.getElementById('top-story');
+    Sortable.create(groups.a, { group: 'blocks' });
+
+    groups.b = document.getElementById('main-event');
+    Sortable.create(groups.b, { group: 'blocks' });
+  })
+  </script>
+
   <div class="ui vertical segment">
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="eight wide column">
-          <div class="ui positive message">
-            Enable some basic transformations of each uploaded image
+          <div class="ui segment">
+            <div class="ui header">
+              Top story
+            </div>
+            <form class="ui form">
+              <div id="top-story" class="ui list">
+                <div class="item">
+                  <button class="ui button">
+                  <i class="remove icon"></i>
+                  Top banner
+                  </button>
+                </div>
+                <div>
+                  <button class="ui button">
+                    <i class="remove icon"></i>
+                    Main story
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
-          <form id="drop-images" action="/file-upload" class="dropzone">
-            <div class="fallback">
-              <input name="file" type="file" multiple />
+
+          <div class="ui segment">
+            <div class="ui header">
+              Main event
             </div>
-          </form>
-          <form class="ui form">
-            <div class="field">
-              <input type="text" name="name" placeholder="Name">
-            </div>
-            <button class="ui button" type="submit">Submit</button>
-          </form>
+            <form class="ui form">
+              <div id="main-event" class="ui list">
+                <div class="item">
+                  <button class="ui button">
+                    <i class="remove icon"></i>
+                    Promotion
+                  </button>
+                </div>
+                <div class="item">
+                  <button class="ui button">
+                    <i class="remove icon"></i>
+                    Concert
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="ui segment">
+            <form class="ui form">
+              <button class="ui primary button">
+                <i class="add icon"></i>
+                Create block
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
