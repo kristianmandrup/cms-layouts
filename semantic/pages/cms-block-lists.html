@@ -23,6 +23,8 @@
   <div class="ui container">
     <a class="item">Home</a>
     <a class="item" href="./cms-pages.html">Pages</a>
+    <a class="item" href="./cms-objects.html">Objects</a>
+    <a class="item" href="./cms-lists.html">Lists</a>
     <a class="active item" href="./cms-blocks.html">Blocks</a>
     <a class="item" href="./cms-images.html">Images</a>
     <a class="item" href="./cms-layouts.html">Layouts</a>
@@ -41,6 +43,8 @@
 <div class="ui vertical inverted sidebar menu">
   <a class="item">Home</a>
   <a class="item" href="./cms-pages.html">Pages</a>
+  <a class="item" href="./cms-objects.html">Objects</a>
+  <a class="item" href="./cms-lists.html">Lists</a>
   <a class="active item" href="./cms-blocks.html">Blocks</a>
   <a class="item" href="./cms-images.html">Images</a>
   <a class="item" href="./cms-layouts.html">Layouts</a>
@@ -58,6 +62,8 @@
         </a>
         <a class="item">Home</a>
         <a class="item" href="./cms-pages.html">Pages</a>
+        <a class="item" href="./cms-objects.html">Objects</a>
+        <a class="item" href="./cms-lists.html">Lists</a>
         <a class="active item" href="./cms-blocks.html">Blocks</a>
         <a class="item" href="./cms-images.html">Images</a>
         <a class="item" href="./cms-layouts.html">Layouts</a>
@@ -73,6 +79,9 @@
   $(function() {
     // Grouping
     var groups = {};
+    groups.new = document.getElementById('new-list');
+    Sortable.create(groups.new, { group: 'blocks' });
+
     groups.a = document.getElementById('top-story');
     Sortable.create(groups.a, { group: 'blocks' });
 
@@ -80,11 +89,35 @@
     Sortable.create(groups.b, { group: 'blocks' });
   })
   </script>
+  <style media="screen">
+    #target-placeholder {
+      box-shadow: none;
+      border-style: dotted;
+      font-weight: 100;
+    }
+  </style>
 
   <div class="ui vertical segment">
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="eight wide column">
+          <div class="ui segment">
+            <div class="ui header">
+              <form name="new-list" class="ui form">
+                <div class="field">
+                  <input type="text" name="name" placeholder="Name">
+                </div>
+              </form>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div id="new-list" class="ui list">
+              <div class="item">
+                <button id="target-placeholder" class="ui basic button">
+                </button>
+              </div>
+            </div>
+          </div>
+
           <div class="ui segment">
             <div class="ui header">
               Top story
@@ -126,15 +159,6 @@
                   </button>
                 </div>
               </div>
-            </form>
-          </div>
-
-          <div class="ui segment">
-            <form class="ui form">
-              <button class="ui primary button">
-                <i class="add icon"></i>
-                Create block
-              </button>
             </form>
           </div>
         </div>

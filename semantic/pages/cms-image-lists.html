@@ -26,6 +26,8 @@
   <div class="ui container">
     <a class="item">Home</a>
     <a class="item" href="./cms-pages.html">Pages</a>
+    <a class="item" href="./cms-objects.html">Objects</a>
+    <a class="item" href="./cms-lists.html">Lists</a>
     <a class="item" href="./cms-blocks.html">Blocks</a>
     <a class="active item" href="./cms-images.html">Images</a>
     <a class="item" href="./cms-layouts.html">Layouts</a>
@@ -44,6 +46,8 @@
 <div class="ui vertical inverted sidebar menu">
   <a class="item">Home</a>
   <a class="item" href="./cms-pages.html">Pages</a>
+  <a class="item" href="./cms-objects.html">Objects</a>
+  <a class="item" href="./cms-lists.html">Lists</a>
   <a class="item" href="./cms-blocks.html">Blocks</a>
   <a class="active item" href="./cms-images.html">Images</a>
   <a class="item" href="./cms-layouts.html">Layouts</a>
@@ -61,6 +65,8 @@
         </a>
         <a class="item">Home</a>
         <a class="item" href="./cms-pages.html">Pages</a>
+        <a class="item" href="./cms-objects.html">Objects</a>
+        <a class="item" href="./cms-lists.html">Lists</a>
         <a class="item" href="./cms-blocks.html">Blocks</a>
         <a class="active item" href="./cms-images.html">Images</a>
         <a class="item" href="./cms-layouts.html">Layouts</a>
@@ -76,11 +82,14 @@
   $(function() {
     // Grouping
     var groups = {};
+    groups.new = document.getElementById('new-list');
+    Sortable.create(groups.new, { group: 'images' });
+
     groups.a = document.getElementById('top-story');
-    Sortable.create(groups.a, { group: 'blocks' });
+    Sortable.create(groups.a, { group: 'images' });
 
     groups.b = document.getElementById('main-event');
-    Sortable.create(groups.b, { group: 'blocks' });
+    Sortable.create(groups.b, { group: 'images' });
   })
   </script>
 
@@ -88,6 +97,28 @@
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="eight wide column">
+          <div class="ui segment">
+            <div class="ui header">
+              <form name="create-list" class="ui form">
+                <div class="field">
+                  <input type="text" name="name" placeholder="Name">
+                </div>
+              </form>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div id="new-list" class="ui list">
+              <div class="item">
+                <button id="target-placeholder" class="ui basic button">
+                </button>
+              </div>
+            </div>
+            <div class="ui hidden divider"></div>
+            <form id="drop-images" action="/file-upload" class="dropzone">
+              <div class="fallback">
+                <input name="file" type="file" multiple />
+              </div>
+            </form>
+          </div>
           <div class="ui segment">
             <div class="ui header">
               Top story
@@ -157,15 +188,6 @@
                   </div>
                 </div>
               </div>
-            </form>
-          </div>
-
-          <div class="ui segment">
-            <form class="ui form">
-              <button class="ui primary button">
-                <i class="add icon"></i>
-                Create block
-              </button>
             </form>
           </div>
         </div>

@@ -25,6 +25,8 @@
   <div class="ui container">
     <a class="item">Home</a>
     <a class="item" href="./cms-pages.html">Pages</a>
+    <a class="item" href="./cms-objects.html">Objects</a>
+    <a class="item" href="./cms-lists.html">Lists</a>
     <a class="item" href="./cms-blocks.html">Blocks</a>
     <a class="active item" href="./cms-images.html">Images</a>
     <a class="item" href="./cms-layouts.html">Layouts</a>
@@ -43,6 +45,8 @@
 <div class="ui vertical inverted sidebar menu">
   <a class="item">Home</a>
   <a class="item" href="./cms-pages.html">Pages</a>
+  <a class="item" href="./cms-objects.html">Objects</a>
+  <a class="item" href="./cms-lists.html">Lists</a>
   <a class="item" href="./cms-blocks.html">Blocks</a>
   <a class="active item" href="./cms-images.html">Images</a>
   <a class="item" href="./cms-layouts.html">Layouts</a>
@@ -60,6 +64,8 @@
         </a>
         <a class="item">Home</a>
         <a class="item" href="./cms-pages.html">Pages</a>
+        <a class="item" href="./cms-objects.html">Objects</a>
+        <a class="item" href="./cms-lists.html">Lists</a>
         <a class="item" href="./cms-blocks.html">Blocks</a>
         <a class="active item" href="./cms-images.html">Images</a>
         <a class="item" href="./cms-layouts.html">Layouts</a>
@@ -72,22 +78,56 @@
   </div>
 
   <div class="ui vertical segment">
+    <div class="ui list">
+      <div class="item">
+        <div class="right floated content">
+          <div class="ui button">
+            <i class="remove icon"></i>
+            Remove
+          </div>
+        </div>
+        <img class="ui avatar image" src="http://lorempixel.com/200/200/sports/">
+        <div class="content">
+          <a class="header">Victory</a>
+          <div class="description">Dark horse wins the race</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui vertical segment">
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="eight wide column">
           <div class="ui positive message">
             Enable some basic transformations of each uploaded image
           </div>
-          <form id="drop-images" action="/file-upload" class="dropzone">
-            <div class="fallback">
-              <input name="file" type="file" multiple />
-            </div>
-          </form>
+          <div class="ui hidden divider"></div>
+          <img class="ui image" src="http://lorempixel.com/400/200/sports/">
+          <img class="ui image" src="http://lorempixel.com/200/100/sports/">
+          <img class="ui image" src="http://lorempixel.com/64/64/sports/">
+          <div class="ui hidden divider"></div>
           <form class="ui form">
             <div class="field">
               <input type="text" name="name" placeholder="Name">
             </div>
-            <button class="ui button" type="submit">Submit</button>
+            <div class="field">
+              <input type="text" name="caption" placeholder="Caption">
+            </div>
+            <div class="ui buttons">
+              <button class="ui button">Cancel</button>
+              <div class="or"></div>
+              <button class="ui positive button">Save</button>
+            </div>
+            <div class="ui floating dropdown labeled search icon right floated button">
+              <i class="list icon"></i>
+              <span class="text">Add to</span>
+              <div class="menu">
+                <div class="item">Top banners</div>
+                <div class="item">Logos</div>
+                <div class="item">Ads</div>
+                <div class="item">Users</div>
+              </div>
+            </div>
           </form>
         </div>
       </div>
