@@ -11,6 +11,7 @@ See /docs
   <!-- Site Properities -->
   <title>Manticore CMS</title>
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/sortablejs/Sortable.min.js"></script>  
   <script src="../dist/semantic.min.js"></script>
   <script src="home/page.js"></script>
   <link rel="stylesheet" type="text/css" class="ui" href="../dist/semantic.min.css">
@@ -82,10 +83,81 @@ See /docs
           <div class="ui positive message">
             Your Object is valid
           </div>
-          <form class="ui form">
-            <div class="field">
-              <input type="text" name="name" placeholder="Name">
+          <div class="ui segment">
+            <form class="ui form">
+              <div class="field">
+                <input type="text" name="name" placeholder="Name">
+              </div>
+              <div class="ui hidden divider"></div>
+              <div id="new-object" class="ui list">
+                <div class="item">
+                  <button id="target-placeholder" class="ui basic button">
+                  </button>
+                </div>
+              </div>
             </div>
+            <script type="text/javascript">
+            $(function() {
+              // Grouping
+              var groups = {};
+              groups.new = document.getElementById('new-object');
+              Sortable.create(groups.new, { group: 'objects' });
+
+              groups.a = document.getElementById('available');
+              Sortable.create(groups.a, { group: 'objects' });
+
+              var content = [
+                { title: 'Newcastle' },
+                { title: 'Manchester United' },
+                { title: 'Chelsea' },
+                { title: 'Birmingham' },
+                { title: 'QPR' }
+              ];
+
+              $('.ui.search').search({
+                source: content
+              });
+            });
+            </script>
+            <style media="screen">
+              #target-placeholder {
+                box-shadow: none;
+                border-style: dotted;
+                font-weight: 100;
+              }
+            </style>
+            <div class="ui segment">
+              <div class="ui header">
+                Available Objects
+              </div>
+              <form class="ui form">
+                <div class="field">
+                  <div class="ui category search">
+                    <div class="ui icon input">
+                      <input class="prompt" type="text" placeholder="Search objects...">
+                      <i class="search icon"></i>
+                    </div>
+                    <div class="results">
+                    </div>
+                  </div>
+                </div>
+                <div id="available" class="ui list">
+                  <div class="item">
+                    <button class="ui button">
+                    <i class="remove icon"></i>
+                    Manchester United
+                    </button>
+                  </div>
+                  <div>
+                    <button class="ui button">
+                      <i class="remove icon"></i>
+                      Chelsea
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
             <div class="ui buttons">
               <button class="ui button">Cancel</button>
               <div class="or"></div>
