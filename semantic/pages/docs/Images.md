@@ -1,5 +1,5 @@
 Images UI
----------
+=========
 
 Images UI consists of the following screens:
 
@@ -30,4 +30,4 @@ The image list allows you to name a list and select images that should be part o
 
 ### Image lists
 
-The image lists allows you to easily manage all your lists and move images from one list to another, remove images etc. If need be, you can enter into a list for more refined management (see above).
+The image lists allows you to easily manage all your lists and move images from one list to another, remove images etc. If need be, you can enter into a list for more refined management (see above). You can also create a new list.
