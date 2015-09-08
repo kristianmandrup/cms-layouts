@@ -6,6 +6,7 @@ CMS UI
 First install dependencies using npm:
 
 -	jquery
+-	jade
 -	semantic-ui
 -	sortablejs
 
@@ -25,7 +26,11 @@ Now you should be ready to work on the page layouts. See the docs for guidance!
 
 ### Usage
 
-`open semantic/pages/cms.html`
+```
+gulp jade
+gulp watch
+open semantic/pages/home.html
+```
 
 ### Pages
 
