@@ -3,7 +3,7 @@ Blocks
 
 Blocks UI consists of the following screens:
 
--	Blocks
+-	Block
 -	Blocks lists
 
 ### Blocks
@@ -27,3 +27,7 @@ A Block can be previewed using one or more Layout templates.
 ### Blocks lists
 
 The *Block lists* allows you to easily manage all your lists and move blocks from one list to another, remove blocks etc. You can also create a new list.
+
+Each list has its own container which acts as a drop zone. Blocks can be dragged in here to be added to the given list.
+
+At the bottom (or top) of the list, there is a no-name list where blocks can be dropped to create a new list. The "no name" is an input which when edited, will create a new list (even an empty one if no blocks in container).

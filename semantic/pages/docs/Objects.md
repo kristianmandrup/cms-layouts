@@ -17,3 +17,9 @@ An Object can be previewed using one or more Layout templates.
 ### Objects
 
 The Objects screen shows multiple objects and allows Drag'n drop of entries between Objects.
+
+Each object has its own container which acts as a drop zone. Items can be dragged in here to be added to the given list.
+
+At the bottom (or top) of the objects, there is a no-name object where items can be dropped to create a new object. The "no name" object has an input field which when edited, will create a new object (even an empty one if no items in container).
+
+Objects with no items should be outlined in red, to display a warning. An object with no items can NOT be published (not valid to be published).

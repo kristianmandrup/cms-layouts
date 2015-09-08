@@ -17,3 +17,9 @@ A list can be previewed using one or more Layout templates.
 ### Lists
 
 The Lists screen shows multiple Lists and allows Drag'n drop of entries between Lists.
+
+Each list has its own container which acts as a drop zone. Items can be dragged in here to be added to the given list.
+
+At the bottom (or top) of the list, there is a no-name list where items can be dropped to create a new list. The "no name" is an input which when edited, will create a new list (even an empty one if no items in container).
+
+List with no items should be outlined in red, to display a warning. A list with no items can NOT be published (not valid to be published).
