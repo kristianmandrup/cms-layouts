@@ -1,3 +1,7 @@
+.meta-data {
+  background-color: rgba(192,192,192, 0.1) !important;
+}
+
 .hidden.menu {
   display: none;
 }

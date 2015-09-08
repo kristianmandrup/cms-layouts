@@ -100,20 +100,41 @@
             <div class="field">
               <input type="text" name="title" placeholder="Title">
             </div>
-            <div class="field">
-              <select name="categories" multiple="" class="ui dropdown">
-                <option value="">Categories</option>
-                <option value="ad">Ad</option>
-                <option value="article">Article</option>
-              </select>
+
+            <div class="two fields">
+              <div class="twelve wide field">
+
+                <select name="categories" multiple="" class="ui dropdown meta-data">
+                  <option value="">Categories</option>
+                  <option value="ad">Ad</option>
+                  <option value="article">Article</option>
+                </select>
+              </div>
+
+              <div class="four wide field">
+                <button class="ui button">
+                  <i class="icon add"></i>
+                  Category
+                </button>
+              </div>
             </div>
-            <div class="field">
-              <select name="tags" multiple="" class="ui dropdown">
-                <option value="">Tags</option>
-                <option value="banner">banner</option>
-                <option value="story">story</option>
-              </select>
+
+            <div class="two fields">
+              <div class="twelve wide field">
+                <select name="tags" multiple="" class="ui dropdown meta-data">
+                  <option value="">Tags</option>
+                  <option value="banner">banner</option>
+                  <option value="story">story</option>
+                </select>
+              </div>
+              <div class="four wide field">
+                <button class="ui button">
+                  <i class="icon add"></i>
+                  Tag
+                </button>
+              </div>
             </div>
+
             <div class="field">
               <select name="templates" multiple="" class="ui dropdown">
                 <option value="">Templates</option>
@@ -121,15 +142,19 @@
                 <option value="side-banner">Side banner</option>
               </select>
             </div>
+
             <div class="field">
               <textarea name="summary" rows="2" placeholder="Summary"></textarea>
             </div>
+
             <div class="field">
               <textarea name="content" placeholder="Content"></textarea>
             </div>
-            <div class="field">
+
+            <div class="field blue">
               <textarea name="description" placeholder="Description"></textarea>
             </div>
+
             <div class="ui striped segment">
               <div class="ui buttons">
                 <button class="ui button">Cancel</button>
