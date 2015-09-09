@@ -144,6 +144,8 @@ Use http://html2jade.org/ to convert Semantic UI HTML "snippets" to Jade. Use [J
 
 To create snippets of Jade that can be reused across multiple pages.
 
+Take a look at `cms-blocks.html` for the most complete *entity form* page. The top and bottom menus need some *LUV*, however most of the required actions and form fields should be included (speak to Ankush).
+
 ### Pages
 
 Demonstrate the UI concepts for eah page
