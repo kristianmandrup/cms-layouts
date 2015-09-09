@@ -45,6 +45,22 @@ To watch the templates and have them auo-compile on Save:
 
 `gulp watch`
 
+### Jade Compile: Troubleshoot
+
+A sample Jade compilation is available as the task `jade:test` compiling a single template in `/test`. If the main one doesn't work, try working from this point until it works, then use in main compilation task!!
+
+`gulp jade:test`
+
+You can also configure the jade compile options directly, such as enabling debug. The filename is used to calculate relative paths, for `extends` and `includes` (see [here](https://github.com/viniwrubleski/grunt-jade-php/issues/2)\)
+
+```js
+var jadeOpts = {
+  // debug: true,
+  filename: './templates/',
+  pretty: true
+}
+```
+
 ### Gulp build configuration
 
 Gulp is configured in the `/build` folder. Paths used are defined in `paths.js`. All build tasks are configured in `/build/tasks`
