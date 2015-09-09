@@ -32,6 +32,21 @@ Block view should allow CRUD (Create, Read, Update, Delete) actions on individua
 -	description (text)
 -	(comments thread) (list)
 
+#### Actions
+
+-	Publish (publish in future)
+-	Select language
+-	Editor: Approve (for publish), Reject (back to Draft status)
+
+Publish at a future date. We need a Date Picker:
+
+-	Semantic UI [Date picker](http://codepen.io/Stephn_R/pen/DGuBd)
+-	Jquery [Date time picker](https://github.com/xdan/datetimepicker)
+-	[Picka date](http://amsul.ca/pickadate.js/)
+-	[Pikaday](https://github.com/dbushell/Pikaday)
+
+#### Notes
+
 Each time a new Block is worked on, the previous Blocks for the current users session should be added to some sort of session list at the top, so it is easy to go back and work on previous Block or even just get an overview of which Blocks I've added (or worked on) in my current session. New Blocks should be colored or outlined in green to indicate "fresh" status. Deleted blocks should be outlined in red, and allow for undo of delete. Edited blocks should be outlined in blue.
 
 A Block can be previewed using one or more Layout templates.
