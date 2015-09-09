@@ -1,0 +1,13 @@
+include ./link-item.jade
+mixin follow-menu
+  .ui.large.secondary.inverted.pointing.menu
+
+    a.toc.item
+      i.sidebar.icon
+
+    each item in menus.main
+      +link-item(item)
+
+    .right.item
+      each item in menus.session
+        a.ui.inverted.button(href='#{item.link}') #{item.label}

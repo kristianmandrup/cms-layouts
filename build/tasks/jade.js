@@ -10,7 +10,7 @@ var util = require('util');
 console.log('Compiling Jade templates:' + paths.jade);
 
 jadeTestOpts = {
-  // debug: true,
+  debug: true,
   filename: './test/',
   pretty: true
 }
@@ -23,12 +23,12 @@ gulp.task('jade:test', function() {
     .pipe(debug({title: 'JADE'}))
     .pipe(data(function(file) {
         var data = require('../../data');
-        console.log(JSON.stringify(data, null, 2));
+        // console.log(JSON.stringify(data, null, 2));
         return data;
     }))
     // needs filename as "root" for relative extend to work (ie template inheritance)
     // See https://github.com/viniwrubleski/grunt-jade-php/issues/2
-    .pipe(jade())
+    .pipe(jade(jadeTestOpts))
     .pipe(gulp.dest('./test'))
 });
 

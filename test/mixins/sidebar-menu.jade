@@ -1,0 +1,10 @@
+include ./link-item.jade
+mixin sidebar-menu
+  // Sidebar Menu
+  .ui.vertical.inverted.sidebar.menu
+
+    each item in menus.main
+      +link-item(item)
+
+    each item in menus.session
+      +link-item(item)
