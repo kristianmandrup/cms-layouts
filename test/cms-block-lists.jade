@@ -29,6 +29,7 @@ block menus
 
 block content
   - var activeItem = {label: 'Pages'}
+  - var lists = {}
   .pusher
     .ui.sticky.inverted.vertical.center.aligned.segment
       .ui.container
@@ -50,26 +51,13 @@ block content
               .ui.secondary.segment
                 .ui.header
                   | Top story
-              .ui.segment
-                form.ui.form
-                  #top-story.ui.list
-                    .item
-                      button.ui.button
-                        i.remove.icon
-                        | Top banner
-                    div
-                      button.ui.button
-                        i.remove.icon
-                        | Main story
-              .ui.secondary.segment
-                .ui.floating.dropdown.labeled.search.icon.green.button
-                  i.list.icon
-                  span.text Add to
-                  .menu
-                    .item Top banners
-                    .item Logos
-                    .item Ads
-                    .item Users
+              //- TODO: Fix this!!!    
+              //- - var items = ['xxx', 'yyy']
+              //- +item-list('my-items', items)
+              //- .ui.secondary.segment
+              //-   - lists.a = ['My list', 'Other list']
+              //-   +add-to('Add to', lists.a)              
+
             .ui.segments
               .ui.secondary.segment
                 .ui.header
@@ -85,13 +73,7 @@ block content
                       button.ui.button
                         i.remove.icon
                         | Concert
-              .ui.secondary.segment
-                .ui.floating.dropdown.labeled.search.icon.green.button
-                  i.list.icon
-                  span.text Add to
-                  .menu
-                    .item Top banners
-                    .item Logos
-                    .item Ads
-                    .item Users
-    
+
+              //- .ui.secondary.segment
+              //-   - lists.b = ['My list', 'Other list']
+              //-   +add-to('Add to', lists.b)

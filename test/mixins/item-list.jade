@@ -1,0 +1,9 @@
+mixin block-list(id, items)
+  .ui.segment
+    form.ui.form
+      div(class='ui list' id='#{id}')
+      each item in items
+        .item
+          button.ui.button
+            i.remove.icon
+            | = item

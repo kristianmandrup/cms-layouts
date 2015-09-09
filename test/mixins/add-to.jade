@@ -1,0 +1,7 @@
+mixin add-to(label, items)
+  .ui.floating.dropdown.labeled.search.icon.green.button
+    i.list.icon
+    span.text = label
+    .menu
+      each item in items
+        .item = item
