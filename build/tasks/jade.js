@@ -18,7 +18,7 @@ gulp.task('jade', function() {
     }))
     .pipe(jade())
     .pipe(print())
-    .pipe(gulp.dest('./apps'))
+    .pipe(gulp.dest(paths.output))
 });
 
 gulp.task('jade:watch', function () {

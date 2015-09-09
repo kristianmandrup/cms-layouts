@@ -3,8 +3,8 @@ var path = require('path');
 
 var root = {
   app: 'semantic',
-  apps: 'semantic/pages',
-  output: 'semantic/dist',
+  apps: 'templates',
+  output: 'dist',
   styles: 'styles'
 }
 
