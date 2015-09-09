@@ -10,10 +10,23 @@
   <!-- Site Properities -->
   <title>Manticore CMS</title>
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+
+  <script src="../../node_modules/pickadate/lib/picker.js"></script>
+  <script src="../../node_modules/pickadate/lib/picker.date.js"></script>
+  <script src="../../node_modules/pickadate/lib/picker.time.js"></script>
+  <link rel="stylesheet" href="../../node_modules/pickadate/lib/themes/default.css">
+  <link rel="stylesheet" href="../../node_modules/pickadate/lib/themes/default.date.css">
+  <link rel="stylesheet" href="../../node_modules/pickadate/lib/themes/default.time.css">
   <script src="../dist/semantic.min.js"></script>
   <script src="home/page.js"></script>
   <link rel="stylesheet" type="text/css" class="ui" href="../dist/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="home/page.css"/>
+  <script type="text/javascript">
+  $(function() {
+    $('.datepicker').pickadate();
+    $('.timepicker').pickatime();
+  });
+  </script>
 </head>
 <body>
 
@@ -93,6 +106,13 @@
                   <div class="item">Dutch</div>
                 </div>
               </div>
+
+              <div class="ui buttons right floated">
+                <button class="ui button">Reject</button>
+                <div class="or"></div>
+                <button class="ui positive button">Approve</button>
+              </div>
+
             </div>
             <div class="field">
               <input type="text" name="name" placeholder="Name">
@@ -112,7 +132,7 @@
               </div>
 
               <div class="four wide field">
-                <button class="ui button">
+                <button class="ui right floated button">
                   <i class="icon add"></i>
                   Category
                 </button>
@@ -128,7 +148,7 @@
                 </select>
               </div>
               <div class="four wide field">
-                <button class="ui button">
+                <button class="ui right floated button">
                   <i class="icon add"></i>
                   Tag
                 </button>
@@ -151,8 +171,21 @@
               <textarea name="content" placeholder="Content"></textarea>
             </div>
 
-            <div class="field blue">
+            <div class="field">
               <textarea name="description" placeholder="Description"></textarea>
+            </div>
+
+            <div class="three fields">
+              <div class="six wide field">
+                <input type="text" class="datepicker" data-value="2015/04/20"/>
+              </div>
+
+              <div class="six wide field">
+                <input type="text" class="timepicker" data-value="12:00"/>
+              </div>
+              <div class="four wide field">
+                <button class="ui right floated button">Publish</button>
+              </div>
             </div>
 
             <div class="ui striped segment">
@@ -173,7 +206,6 @@
                     <div class="item">Users</div>
                   </div>
                 </div>
-                <button class="ui button">Publish</button>
                 <button class="ui secondary button">Preview</button>
               </div>
 
