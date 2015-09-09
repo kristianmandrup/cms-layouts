@@ -1,5 +1,5 @@
-mixin link-item(item, active)
-  if item.label === active.label
+mixin link-item(item)
+  if item.label === activeItem.label
     a.active.item(href='#{item.link}')= item.label
   else 
     a.item(href='#{item.link}')= item.label

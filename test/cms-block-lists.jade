@@ -1,9 +1,96 @@
 // define active menu item (global data)
-- var activeItem = {label: 'Blocks'}
 extends ./layouts/page-layout.jade      
 block scripts
   script(type='text/javascript').
+    $(function() {
+      // Grouping
+      var groups = {};
+      // TODO: Don't use top-story and main-event each time!!! Avoid COPY-PASTE!!
+      groups.new = document.getElementById('new-list');
+      Sortable.create(groups.new, { group: 'blocks' });
+      groups.a = document.getElementById('top-story');
+      Sortable.create(groups.a, { group: 'blocks' });
+      groups.b = document.getElementById('main-event');
+      Sortable.create(groups.b, { group: 'blocks' });
+    })
 
-// TODO: refactor into reusable mixins!!!
+block styles
+  style(media='screen').
+    #target-placeholder {
+    box-shadow: none;
+    border-style: dotted;
+    font-weight: 100;
+    }
+
+block menus
+  - var activeItem = {label: 'Blocks'}
+  +follow-menu(activeItem)
+  +sidebar-menu(activeItem)
+
 block content
-  .row
+  .pusher
+    .ui.sticky.inverted.vertical.center.aligned.segment
+      .ui.container
+        +top-menu(activeItem)
+
+    //- .ui.vertical.segment
+    //-   .ui.middle.aligned.stackable.grid.container
+    //-     .row
+    //-       .eight.wide.column
+    //-         .ui.segment
+    //-           .ui.header
+    //-             form.ui.form(name='new-list')
+    //-               .field
+    //-                 input(type='text', name='name', placeholder='Name')
+    //-           .ui.hidden.divider
+    //-           #new-list.ui.list
+    //-             .item
+    //-               button#target-placeholder.ui.basic.button
+    //-         .ui.segments
+    //-           .ui.secondary.segment
+    //-             .ui.header
+    //-               | Top story
+    //-           .ui.segment
+    //-             form.ui.form
+    //-               #top-story.ui.list
+    //-                 .item
+    //-                   button.ui.button
+    //-                     i.remove.icon
+    //-                     | Top banner
+    //-                 div
+    //-                   button.ui.button
+    //-                     i.remove.icon
+    //-                     | Main story
+    //-           .ui.secondary.segment
+    //-             .ui.floating.dropdown.labeled.search.icon.green.button
+    //-               i.list.icon
+    //-               span.text Add to
+    //-               .menu
+    //-                 .item Top banners
+    //-                 .item Logos
+    //-                 .item Ads
+    //-                 .item Users
+    //-         .ui.segments
+    //-           .ui.secondary.segment
+    //-             .ui.header
+    //-               | Main event
+    //-           .ui.segment
+    //-             form.ui.form
+    //-               #main-event.ui.list
+    //-                 .item
+    //-                   button.ui.button
+    //-                     i.remove.icon
+    //-                     | Promotion
+    //-                 .item
+    //-                   button.ui.button
+    //-                     i.remove.icon
+    //-                     | Concert
+    //-           .ui.secondary.segment
+    //-             .ui.floating.dropdown.labeled.search.icon.green.button
+    //-               i.list.icon
+    //-               span.text Add to
+    //-               .menu
+    //-                 .item Top banners
+    //-                 .item Logos
+    //-                 .item Ads
+    //-                 .item Users

@@ -13,11 +13,37 @@
     <script src="home/page.js"></script>
     <link rel="stylesheet" type="text/css" href="../dist/semantic.min.css" class="ui">
     <link rel="stylesheet" type="text/css" href="home/page.css">
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function() {
+        // Grouping
+        var groups = {};
+        // TODO: Don't use top-story and main-event each time!!! Avoid COPY-PASTE!!
+        groups.new = document.getElementById('new-list');
+        Sortable.create(groups.new, { group: 'blocks' });
+        groups.a = document.getElementById('top-story');
+        Sortable.create(groups.a, { group: 'blocks' });
+        groups.b = document.getElementById('main-event');
+        Sortable.create(groups.b, { group: 'blocks' });
+      })
+      
+    </script>
+    <style media="screen">
+      #target-placeholder {
+      box-shadow: none;
+      border-style: dotted;
+      font-weight: 100;
+      }
+      
+    </style>
   </head>
-  <body>
-    <!-- include ../mixins/follow-menu.jade-->
-    <!-- Following Menu-->
-    <div class="ui large top fixed hidden menu">FOLLOW ME</div>
+  <body>   
+    <div class="ui large secondary inverted pointing menu"><a class="toc item"><i class="sidebar icon"></i></a><a href="./home.html" class="item">Home</a><a href="./cms-pages.html" class="item">Pages</a><a href="./cms-objects.html" class="item">Objects</a><a href="./cms-lists.html" class="item">Lists</a><a href="./cms-blocks.html" class="active item">Blocks</a><a href="./cms-images.html" class="item">Images</a><a href="./cms-layouts.html" class="item">Layouts</a>
+      <div class="right item"><a href="#" class="ui inverted button">Log in</a><a href="#" class="ui inverted button">Sign up</a>
+      </div>
+    </div>
+    <!-- Sidebar Menu-->
+    <div class="ui vertical inverted sidebar menu"><a href="./home.html" class="item">Home</a><a href="./cms-pages.html" class="item">Pages</a><a href="./cms-objects.html" class="item">Objects</a><a href="./cms-lists.html" class="item">Lists</a><a href="./cms-blocks.html" class="active item">Blocks</a><a href="./cms-images.html" class="item">Images</a><a href="./cms-layouts.html" class="item">Layouts</a><a href="#" class="item">Log in</a><a href="#" class="item">Sign up</a>
+    </div>
+    <div class="row"></div>
   </body>
 </html>
