@@ -45,6 +45,49 @@ To watch the templates and have them auo-compile on Save:
 
 `gulp watch`
 
+### Global Template Data
+
+Global data is fed into the Jade templates via [gulp-data](https://www.npmjs.com/package/gulp-data) as recommended in [gulp-jade](https://github.com/phated/gulp-jade)
+
+The data is fetched from `/data/index.js`
+
+```js
+// global template data
+module.exports = {
+  menus: {
+    main: [
+      ...
+    ],
+    session: [
+      ...
+    ]
+  }
+}
+```
+
+### Jade Template page
+
+Currently the only page which has been converted (partly) to the "Jade Way" is: `cms-block-lists.jade`
+
+```html
+// which menu item is displayed as active
+- var activeItem = {label: 'Blocks'}
+extends ./layouts/page-layout.jade      
+
+block scripts
+  // page specific scripts
+block styles
+  // page specific styles
+block content
+  // page specific content
+```
+
+Please make this template work (f.ex by moving it to `/test` and working with it in isolation using `gulp jade:test`\)
+
+Then make all the other page templates follow a similar style. Try to make the pages as composable as possible using Mixins and Global data. We don't stop here!
+
+These templates and mixins will be later be converted to *Custom tags* and *Reactive Widgets* when we move this project to [Markoa](https://github.com/kristianmandrup/markoa)
+
 ### Jade Compile: Troubleshoot
 
 A sample Jade compilation is available as the task `jade:test` compiling a single template in `/test`. If the main one doesn't work, try working from this point until it works, then use in main compilation task!!
