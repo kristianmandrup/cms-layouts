@@ -1,0 +1,12 @@
+include ./link-item.jade
+mixin follow-menu
+  // Following Menu
+  .ui.large.top.fixed.hidden.menu
+    .ui.container
+      each item in menus.main.items
+        +link-item(item)
+
+      .right.menu
+        each item in menus.session.items
+          .item
+            a.ui.button(href='#{item.link}')= item.label

@@ -26,11 +26,30 @@ Now you should be ready to work on the page layouts. See the docs for guidance!
 
 ### Usage
 
+To view the site:
+
+```
+open semantic/pages/home.html
+```
+
+### Jade templates
+
+To compile the Jade templates to HTML:
+
 ```
 gulp jade
 gulp watch
 open semantic/pages/home.html
 ```
+
+### Development
+
+Use http://html2jade.org/ to convert Semantic UI HTML "snippets" to Jade. Use http://jade-lang.com/ to work with the HTML structure. In particular use:
+
+-	[Inheritance](http://jade-lang.com/reference/extends/)
+-	[Mixins](http://jade-lang.com/reference/mixins/)
+
+To create snippets of Jade that can be reused across multiple pages.
 
 ### Pages
 

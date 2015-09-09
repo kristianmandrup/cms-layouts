@@ -1,0 +1,157 @@
+doctype html
+html
+  head
+    // Standard Meta
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    // Site Properities
+    title Manticore CMS
+    script(src='../../node_modules/jquery/dist/jquery.min.js')
+    script(src='../dist/semantic.min.js')
+    script(src='home/page.js')
+    link.ui(rel='stylesheet', type='text/css', href='../dist/semantic.min.css')
+    link(rel='stylesheet', type='text/css', href='home/page.css')
+  body
+    // Following Menu
+    .ui.large.top.fixed.hidden.menu
+      .ui.container
+        a.item(href='./home.html') Home
+        a.active.item(href='./cms-pages.html') Pages
+        a.item(href='./cms-objects.html') Objects
+        a.item(href='./cms-lists.html') Lists
+        a.item(href='./cms-blocks.html') Blocks
+        a.item(href='./cms-images.html') Images
+        a.item(href='./cms-layouts.html') Layouts
+        .right.menu
+          .item
+            a.ui.button Log in
+          .item
+            a.ui.primary.button Sign Up
+    // Sidebar Menu
+    .ui.vertical.inverted.sidebar.menu
+      a.item(href='./home.html') Home
+      a.active.item(href='./cms-pages.html') Pages
+      a.item(href='./cms-objects.html') Objects
+      a.item(href='./cms-lists.html') Lists
+      a.item(href='./cms-blocks.html') Blocks
+      a.item(href='./cms-images.html') Images
+      a.item(href='./cms-layouts.html') Layouts
+      a.item Login
+      a.item Signup
+    // Page Contents
+    .pusher
+      .ui.sticky.inverted.vertical.center.aligned.segment
+        .ui.container
+          .ui.large.secondary.inverted.pointing.menu
+            a.toc.item
+              i.sidebar.icon
+            a.item(href='./home.html') Home
+            a.active.item(href='./cms-pages.html') Pages
+            a.item(href='./cms-objects.html') Objects
+            a.item(href='./cms-lists.html') Lists
+            a.item(href='./cms-blocks.html') Blocks
+            a.item(href='./cms-images.html') Images
+            a.item(href='./cms-layouts.html') Layouts
+            .right.item
+              a.ui.inverted.button Log in
+              a.ui.inverted.button Sign Up
+      .ui.vertical.segment
+        .ui.middle.aligned.stackable.grid.container
+          .row
+            .eight.wide.column
+              .ui.positive.message
+                | Your page is valid
+              form.ui.form
+                .field
+                  .ui.floating.dropdown.labeled.search.icon.button
+                    i.world.icon
+                    span.text Select Language
+                    .menu
+                      .item Arabic
+                      .item Chinese
+                      .item Danish
+                      .item Dutch
+                .field
+                  input.meta-data(type='text', name='name', placeholder='Name')
+                .field
+                  input(type='text', name='title', placeholder='Title')
+                .two.fields
+                  .twelve.wide.field
+                    select.ui.dropdown(name='lists', multiple='')
+                      option(value='') Lists
+                      option(value='top-menu') top menu
+                      option(value='side-menu') side menu
+                  .four.wide.field
+                    button.ui.button
+                      i.icon.add
+                      |                   List
+                .two.fields
+                  .twelve.wide.field
+                    select.ui.dropdown(name='objects', multiple='')
+                      option(value='') Objects
+                      option(value='users') users
+                      option(value='projects') projects
+                  .four.wide.field
+                    button.ui.button
+                      i.icon.add
+                      |                   Object
+                .two.fields
+                  .twelve.wide.field
+                    select.ui.dropdown.meta-data(name='categories', multiple='')
+                      option(value='') Categories
+                      option(value='ad') Ad
+                      option(value='article') Article
+                  .four.wide.field
+                    button.ui.button
+                      i.icon.add
+                      |                   Category
+                .two.fields
+                  .twelve.wide.field
+                    select.ui.dropdown.meta-data(name='tags', multiple='')
+                      option(value='') Tags
+                      option(value='banner') banner
+                      option(value='story') story
+                  .four.wide.field
+                    button.ui.button
+                      i.icon.add
+                      |                   Tag
+                .two.fields
+                  .twelve.wide.field
+                    select.ui.dropdown(name='blocks', multiple='')
+                      option(value='') Blocks
+                      option(value='top-article') Top article
+                      option(value='promotion') Promotion
+                  .four.wide.field
+                    button.ui.button
+                      i.icon.add
+                      |                   Block
+                .two.fields
+                  .twelve.wide.field
+                    select.ui.dropdown(name='images', multiple='')
+                      option(value='') Images
+                      option(value='logo') Logo
+                      option(value='showcase') Showcase
+                  .four.wide.field
+                    button.ui.button
+                      i.icon.add
+                      |                   Image
+                .two.fields
+                  .twelve.wide.field
+                    select.ui.dropdown(name='templates', multiple='')
+                      option(value='') Templates
+                      option(value='top-banner') Home page
+                      option(value='side-banner') Sports page
+                  .four.wide.field
+                    button.ui.button
+                      i.icon.add
+                      |                   Template
+                .field
+                  textarea.meta-data(name='description', placeholder='Description')
+                .ui.buttons
+                  button.ui.button Cancel
+                  .or
+                  button.ui.positive.button Save
+                .ui.right.floated.buttons
+                  button.ui.button Publish
+                  button.ui.secondary.button Preview
