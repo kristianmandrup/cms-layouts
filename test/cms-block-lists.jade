@@ -1,5 +1,5 @@
 // define active menu item (global data)
-extends ./layouts/page-layout.jade      
+extends ./layouts/page-layout.jade
 block scripts
   script(type='text/javascript').
     $(function() {
@@ -23,74 +23,75 @@ block styles
     }
 
 block menus
-  - var activeItem = {label: 'Blocks'}
+  - var activeItem = {label: 'Pages'}
   +follow-menu(activeItem)
   +sidebar-menu(activeItem)
 
 block content
+  - var activeItem = {label: 'Pages'}
   .pusher
     .ui.sticky.inverted.vertical.center.aligned.segment
       .ui.container
         +top-menu(activeItem)
-
-    //- .ui.vertical.segment
-    //-   .ui.middle.aligned.stackable.grid.container
-    //-     .row
-    //-       .eight.wide.column
-    //-         .ui.segment
-    //-           .ui.header
-    //-             form.ui.form(name='new-list')
-    //-               .field
-    //-                 input(type='text', name='name', placeholder='Name')
-    //-           .ui.hidden.divider
-    //-           #new-list.ui.list
-    //-             .item
-    //-               button#target-placeholder.ui.basic.button
-    //-         .ui.segments
-    //-           .ui.secondary.segment
-    //-             .ui.header
-    //-               | Top story
-    //-           .ui.segment
-    //-             form.ui.form
-    //-               #top-story.ui.list
-    //-                 .item
-    //-                   button.ui.button
-    //-                     i.remove.icon
-    //-                     | Top banner
-    //-                 div
-    //-                   button.ui.button
-    //-                     i.remove.icon
-    //-                     | Main story
-    //-           .ui.secondary.segment
-    //-             .ui.floating.dropdown.labeled.search.icon.green.button
-    //-               i.list.icon
-    //-               span.text Add to
-    //-               .menu
-    //-                 .item Top banners
-    //-                 .item Logos
-    //-                 .item Ads
-    //-                 .item Users
-    //-         .ui.segments
-    //-           .ui.secondary.segment
-    //-             .ui.header
-    //-               | Main event
-    //-           .ui.segment
-    //-             form.ui.form
-    //-               #main-event.ui.list
-    //-                 .item
-    //-                   button.ui.button
-    //-                     i.remove.icon
-    //-                     | Promotion
-    //-                 .item
-    //-                   button.ui.button
-    //-                     i.remove.icon
-    //-                     | Concert
-    //-           .ui.secondary.segment
-    //-             .ui.floating.dropdown.labeled.search.icon.green.button
-    //-               i.list.icon
-    //-               span.text Add to
-    //-               .menu
-    //-                 .item Top banners
-    //-                 .item Logos
-    //-                 .item Ads
-    //-                 .item Users
+    .ui.vertical.segment
+      .ui.middle.aligned.stackable.grid.container
+        .row
+          .eight.wide.column
+            .ui.segment
+              .ui.header
+                form.ui.form(name='new-list')
+                  .field
+                    input(type='text', name='name', placeholder='Name')
+              .ui.hidden.divider
+              #new-list.ui.list
+                .item
+                  button#target-placeholder.ui.basic.button
+            .ui.segments
+              .ui.secondary.segment
+                .ui.header
+                  | Top story
+              .ui.segment
+                form.ui.form
+                  #top-story.ui.list
+                    .item
+                      button.ui.button
+                        i.remove.icon
+                        | Top banner
+                    div
+                      button.ui.button
+                        i.remove.icon
+                        | Main story
+              .ui.secondary.segment
+                .ui.floating.dropdown.labeled.search.icon.green.button
+                  i.list.icon
+                  span.text Add to
+                  .menu
+                    .item Top banners
+                    .item Logos
+                    .item Ads
+                    .item Users
+            .ui.segments
+              .ui.secondary.segment
+                .ui.header
+                  | Main event
+              .ui.segment
+                form.ui.form
+                  #main-event.ui.list
+                    .item
+                      button.ui.button
+                        i.remove.icon
+                        | Promotion
+                    .item
+                      button.ui.button
+                        i.remove.icon
+                        | Concert
+              .ui.secondary.segment
+                .ui.floating.dropdown.labeled.search.icon.green.button
+                  i.list.icon
+                  span.text Add to
+                  .menu
+                    .item Top banners
+                    .item Logos
+                    .item Ads
+                    .item Users
+    

@@ -37,13 +37,104 @@
     </style>
   </head>
   <body>   
-    <div class="ui large secondary inverted pointing menu"><a class="toc item"><i class="sidebar icon"></i></a><a href="./home.html" class="item">Home</a><a href="./cms-pages.html" class="item">Pages</a><a href="./cms-objects.html" class="item">Objects</a><a href="./cms-lists.html" class="item">Lists</a><a href="./cms-blocks.html" class="active item">Blocks</a><a href="./cms-images.html" class="item">Images</a><a href="./cms-layouts.html" class="item">Layouts</a>
-      <div class="right item"><a href="#" class="ui inverted button">Log in</a><a href="#" class="ui inverted button">Sign up</a>
+    <!-- Following Menu-->
+    <div class="ui large top fixed hidden menu">
+      <div class="ui container"><a href="./home.html" class="item">Home</a><a href="./cms-pages.html" class="active item">Pages</a><a href="./cms-objects.html" class="item">Objects</a><a href="./cms-lists.html" class="item">Lists</a><a href="./cms-blocks.html" class="item">Blocks</a><a href="./cms-images.html" class="item">Images</a><a href="./cms-layouts.html" class="item">Layouts</a>
+        <div class="right menu">
+          <div class="item"><a href="#" class="ui button">Log in</a></div>
+          <div class="item"><a href="#" class="ui button">Sign up</a></div>
+        </div>
       </div>
     </div>
     <!-- Sidebar Menu-->
-    <div class="ui vertical inverted sidebar menu"><a href="./home.html" class="item">Home</a><a href="./cms-pages.html" class="item">Pages</a><a href="./cms-objects.html" class="item">Objects</a><a href="./cms-lists.html" class="item">Lists</a><a href="./cms-blocks.html" class="active item">Blocks</a><a href="./cms-images.html" class="item">Images</a><a href="./cms-layouts.html" class="item">Layouts</a><a href="#" class="item">Log in</a><a href="#" class="item">Sign up</a>
+    <div class="ui vertical inverted sidebar menu"><a href="./home.html" class="item">Home</a><a href="./cms-pages.html" class="active item">Pages</a><a href="./cms-objects.html" class="item">Objects</a><a href="./cms-lists.html" class="item">Lists</a><a href="./cms-blocks.html" class="item">Blocks</a><a href="./cms-images.html" class="item">Images</a><a href="./cms-layouts.html" class="item">Layouts</a><a href="#" class="item">Log in</a><a href="#" class="item">Sign up</a>
     </div>
-    <div class="row"></div>
+    <div class="pusher">
+      <div class="ui sticky inverted vertical center aligned segment">
+        <div class="ui container">
+          <div class="ui large secondary inverted pointing menu"><a class="toc item"><i class="sidebar icon"></i></a><a href="./home.html" class="item">Home</a><a href="./cms-pages.html" class="active item">Pages</a><a href="./cms-objects.html" class="item">Objects</a><a href="./cms-lists.html" class="item">Lists</a><a href="./cms-blocks.html" class="item">Blocks</a><a href="./cms-images.html" class="item">Images</a><a href="./cms-layouts.html" class="item">Layouts</a>
+            <div class="right item"><a href="#" class="ui inverted button">Log in</a><a href="#" class="ui inverted button">Sign up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui vertical segment">
+        <div class="ui middle aligned stackable grid container">
+          <div class="row">
+            <div class="eight wide column">
+              <div class="ui segment">
+                <div class="ui header">
+                  <form name="new-list" class="ui form">
+                    <div class="field">
+                      <input type="text" name="name" placeholder="Name">
+                    </div>
+                  </form>
+                </div>
+                <div class="ui hidden divider"></div>
+                <div id="new-list" class="ui list">
+                  <div class="item">
+                    <button id="target-placeholder" class="ui basic button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="ui segments">
+                <div class="ui secondary segment">
+                  <div class="ui header">Top story</div>
+                </div>
+                <div class="ui segment">
+                  <form class="ui form">
+                    <div id="top-story" class="ui list">
+                      <div class="item">
+                        <button class="ui button"><i class="remove icon"></i>Top banner</button>
+                      </div>
+                      <div>
+                        <button class="ui button"><i class="remove icon"></i>Main story</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="ui secondary segment">
+                  <div class="ui floating dropdown labeled search icon green button"><i class="list icon"></i><span class="text">Add to</span>
+                    <div class="menu">
+                      <div class="item">Top banners</div>
+                      <div class="item">Logos</div>
+                      <div class="item">Ads</div>
+                      <div class="item">Users</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ui segments">
+                <div class="ui secondary segment">
+                  <div class="ui header">Main event</div>
+                </div>
+                <div class="ui segment">
+                  <form class="ui form">
+                    <div id="main-event" class="ui list">
+                      <div class="item">
+                        <button class="ui button"><i class="remove icon"></i>Promotion</button>
+                      </div>
+                      <div class="item">
+                        <button class="ui button"><i class="remove icon"></i>Concert</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="ui secondary segment">
+                  <div class="ui floating dropdown labeled search icon green button"><i class="list icon"></i><span class="text">Add to</span>
+                    <div class="menu">
+                      <div class="item">Top banners</div>
+                      <div class="item">Logos</div>
+                      <div class="item">Ads</div>
+                      <div class="item">Users</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

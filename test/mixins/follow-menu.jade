@@ -1,10 +1,10 @@
 include ./link-item.jade
-mixin follow-menu
+mixin follow-menu(activeItem)
   // Following Menu
   .ui.large.top.fixed.hidden.menu
     .ui.container
       each item in menus.main
-        +link-item(item)
+        +link-item(item, activeItem)
   
       .right.menu
         each item in menus.session
