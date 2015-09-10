@@ -16,6 +16,8 @@ At the bottom (or top) of the list, there is a no-name list where blocks can be 
 
 When a single Block is clicked for Edit, a modal should be shown to edit that Block. A Modal view is also displayed for previewing an Block.
 
+The list themselves also form a list and should also be draggable, so as to position the lists to better drag items between them. For this, an appropriate handle should be defined using the [SortableJS API](https://github.com/RubaXa/Sortable).
+
 ### Block (modal: edit/preview)
 
 Used for both Preview and Edit mode. Preview should allow Edit of each field displayed by a small edit icon.

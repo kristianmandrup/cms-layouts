@@ -3,14 +3,19 @@ CMS UI
 
 ### Install
 
-First install dependencies using npm:
+Install [Node 4.0](https://nodejs.org/en/download/) or higher
+
+Install dependencies via npm:
 
 -	jquery
 -	jade
 -	semantic-ui
 -	sortablejs
+-	pickadate
+-	...
 
 ```sh
+npm install -g gulp myth jade
 npm install
 ```
 
