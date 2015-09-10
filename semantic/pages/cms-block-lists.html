@@ -110,14 +110,14 @@
               </form>
             </div>
             <div class="ui hidden divider"></div>
-            <div id="new-list" class="ui list">
-              <div class="item">
-                <button id="target-placeholder" class="ui basic button">
-                </button>
-              </div>
+            <div id="new-list" class="ui list" style="height: 2em">
             </div>
           </div>
 
+          <!--
+          Should most likely rather be a list with items that contain lists themselves
+          Then we can drag and reorder the top level containers on their own as well!
+          -->
           <div class="ui segments">
             <div class="ui secondary segment">
               <div class="ui header">
@@ -127,17 +127,22 @@
             <div class="ui segment">
               <form class="ui form">
                 <div id="top-story" class="ui list">
+                  <!-- Each item should be presented much better than a simple button -->
+
                   <div class="item">
-                    <button class="ui button">
-                    <i class="remove icon"></i>
-                    Top banner
-                    </button>
+                    <img class="ui avatar image" src="http://www.lorempixel.com/100/100/sports">
+                    <div class="content">
+                      <a class="header">Rachel</a>
+                      <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.</div>
+                    </div>
                   </div>
-                  <div>
-                    <button class="ui button">
-                      <i class="remove icon"></i>
-                      Main story
-                    </button>
+
+                  <div class="item">
+                    <img class="ui avatar image" src="http://www.lorempixel.com/100/100/sports">
+                    <div class="content">
+                      <a class="header">Rachel</a>
+                      <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.</div>
+                    </div>
                   </div>
                 </div>
               </form>
