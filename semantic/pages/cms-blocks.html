@@ -94,7 +94,8 @@
           <div class="ui positive message">
             Your block is valid
           </div>
-          <div class="ui stackable menu">
+          <!-- top menu -->
+          <div class="ui stackable secondary menu">
             <div class="item">
               <div class="ui dropdown labeled search icon button">
                 <i class="world icon"></i>
@@ -110,10 +111,10 @@
             <div class="item">
               <div class="ui toggle checkbox">
                 <input type="checkbox" name="auto-translate">
-                <label>Auto translate</label>
+                <label>Translate</label>
               </div>
             </div>
-            <div class="item">
+            <div class="right floated item">
               <div class="ui buttons">
                 <button class="ui button">Reject</button>
                 <div class="or"></div>
@@ -121,108 +122,111 @@
               </div>
             </div>
           </div>
-          <form class="ui form">
-            <div class="field">
-              <input type="text" name="name" placeholder="Name">
-            </div>
-            <div class="field">
-              <input type="text" name="title" placeholder="Title">
-            </div>
-
-            <div class="two fields">
-              <div class="twelve wide field">
-
-                <select name="categories" multiple="" class="ui dropdown meta-data">
-                  <option value="">Categories</option>
-                  <option value="ad">Ad</option>
-                  <option value="article">Article</option>
-                </select>
+          <!-- form: good or bad to put in a segment? -->
+          <div class="ui segment">
+            <form class="ui form">
+              <div class="field">
+                <input type="text" name="name" placeholder="Name">
+              </div>
+              <div class="field">
+                <input type="text" name="title" placeholder="Title">
               </div>
 
-              <div class="four wide field">
-                <button class="ui right floated button">
-                  <i class="icon add"></i>
-                  Category
-                </button>
-              </div>
-            </div>
+              <div class="two fields">
+                <div class="twelve wide field">
 
-            <div class="two fields">
-              <div class="twelve wide field">
-                <select name="tags" multiple="" class="ui dropdown meta-data">
-                  <option value="">Tags</option>
-                  <option value="banner">banner</option>
-                  <option value="story">story</option>
-                </select>
-              </div>
-              <div class="four wide field">
-                <button class="ui right floated button">
-                  <i class="icon add"></i>
-                  Tag
-                </button>
-              </div>
-            </div>
+                  <select name="categories" multiple="" class="ui dropdown meta-data">
+                    <option value="">Categories</option>
+                    <option value="ad">Ad</option>
+                    <option value="article">Article</option>
+                  </select>
+                </div>
 
-            <div class="field">
-              <select name="templates" multiple="" class="ui dropdown">
-                <option value="">Templates</option>
-                <option value="top-banner">Top banner</option>
-                <option value="side-banner">Side banner</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <textarea name="summary" rows="2" placeholder="Summary"></textarea>
-            </div>
-
-            <div class="field">
-              <textarea name="content" placeholder="Content"></textarea>
-            </div>
-
-            <div class="field">
-              <textarea name="description" placeholder="Description"></textarea>
-            </div>
-
-            <div class="three fields">
-              <div class="six wide field">
-                <input type="text" class="datepicker" data-value="2015/04/20"/>
-              </div>
-
-              <div class="six wide field">
-                <input type="text" class="timepicker" data-value="12:00"/>
-              </div>
-              <div class="four wide field">
-                <button class="ui right floated button">Publish</button>
-              </div>
-            </div>
-
-            <div class="ui stackable menu">
-              <div class="item">
-                <div class="ui buttons">
-                  <button class="ui button">Cancel</button>
-                  <div class="or"></div>
-                  <button class="ui positive button">Save</button>
+                <div class="four wide field">
+                  <button class="ui right floated button">
+                    <i class="icon add"></i>
+                    Category
+                  </button>
                 </div>
               </div>
-              <div class="item">
-                <div class="ui buttons">
-                  <div class="ui dropdown labeled search icon right floated button">
-                    <i class="list icon"></i>
-                    <span class="text">Add to</span>
-                    <div class="menu">
-                      <div class="item">Top banners</div>
-                      <div class="item">Logos</div>
-                      <div class="item">Ads</div>
-                      <div class="item">Users</div>
-                    </div>
+
+              <div class="two fields">
+                <div class="twelve wide field">
+                  <select name="tags" multiple="" class="ui dropdown meta-data">
+                    <option value="">Tags</option>
+                    <option value="banner">banner</option>
+                    <option value="story">story</option>
+                  </select>
+                </div>
+                <div class="four wide field">
+                  <button class="ui right floated button">
+                    <i class="icon add"></i>
+                    Tag
+                  </button>
+                </div>
+              </div>
+
+              <div class="field">
+                <select name="templates" multiple="" class="ui dropdown">
+                  <option value="">Templates</option>
+                  <option value="top-banner">Top banner</option>
+                  <option value="side-banner">Side banner</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <textarea name="summary" rows="2" placeholder="Summary"></textarea>
+              </div>
+
+              <div class="field">
+                <textarea name="content" placeholder="Content"></textarea>
+              </div>
+
+              <div class="field">
+                <textarea name="description" placeholder="Description"></textarea>
+              </div>
+
+              <div class="three fields">
+                <div class="six wide field">
+                  <input type="text" class="datepicker" data-value="2015/04/20"/>
+                </div>
+
+                <div class="six wide field">
+                  <input type="text" class="timepicker" data-value="12:00"/>
+                </div>
+                <div class="four wide field">
+                  <button class="ui right floated button">Publish</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- bottom menu -->
+          <div class="ui stackable secondary menu">
+            <div class="item">
+              <div class="ui buttons">
+                <button class="ui button">Cancel</button>
+                <div class="or"></div>
+                <button class="ui positive button">Save</button>
+              </div>
+            </div>
+            <div class="item">
+              <div class="ui buttons">
+                <div class="ui dropdown labeled search icon right floated button">
+                  <i class="list icon"></i>
+                  <span class="text">Add to</span>
+                  <div class="menu">
+                    <div class="item">Top banners</div>
+                    <div class="item">Logos</div>
+                    <div class="item">Ads</div>
+                    <div class="item">Users</div>
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <button class="ui secondary button">Preview</button>
-              </div>
             </div>
-          </form>
+            <div class="right aligned item">
+              <button class="ui secondary button">Preview</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
