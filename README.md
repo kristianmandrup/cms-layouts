@@ -151,6 +151,8 @@ To create snippets of Jade that can be reused across multiple pages.
 
 Take a look at `cms-blocks.html` for the most complete *entity form* page. The top and bottom menus need some *LUV*, however most of the required actions and form fields should be included (speak to Ankush).
 
+Look at `cms-image-lists.html` for the most updated page for dragging elements between containers. The Image list allows the containers themselves to be sorted!
+
 ### Pages
 
 Demonstrate the UI concepts for eah page

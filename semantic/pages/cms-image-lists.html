@@ -77,6 +77,11 @@
       </div>
     </div>
   </div>
+  <style media="screen">
+    .list-header {
+      cursor: pointer
+    }
+  </style>
 
   <script type="text/javascript">
   $(function() {
@@ -90,6 +95,11 @@
 
     groups.b = document.getElementById('main-event');
     Sortable.create(groups.b, { group: 'images' });
+
+    var list = document.getElementById("lists");
+    Sortable.create(list, {
+      handle: '.list-header'
+    }); // That's all.
   })
   </script>
 
@@ -115,76 +125,78 @@
               </div>
             </form>
           </div>
-          <div class="ui segment">
-            <div class="ui header">
-              Top story
-            </div>
-            <form class="ui form">
-              <div id="top-story" class="ui list">
-                <div class="item">
-                  <div class="right floated content">
-                    <div class="ui button">
-                      <i class="remove icon"></i>
-                      Remove
-                    </div>
-                  </div>
-                  <img class="ui avatar image" src="http://lorempixel.com/200/200/sports/">
-                  <div class="content">
-                    <a class="header">Victory</a>
-                    <div class="description">Dark horse wins the race</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="right floated content">
-                    <div class="ui button">
-                      <i class="remove icon"></i>
-                      Remove
-                    </div>
-                  </div>
-                  <img class="ui avatar image" src="http://lorempixel.com/200/200/sports/">
-                  <div class="content">
-                    <a class="header">The final</a>
-                    <div class="description">A tight race to the finish</div>
-                  </div>
-                </div>
+          <div id="lists" class="ui list">
+            <div class="item">
+              <div class="ui header list-header">
+                Top story
               </div>
-            </form>
-          </div>
+              <form class="ui form">
+                <div id="top-story" class="ui list">
+                  <div class="item">
+                    <div class="right floated content">
+                      <div class="ui button">
+                        <i class="remove icon"></i>
+                        Remove
+                      </div>
+                    </div>
+                    <img class="ui avatar image" src="http://lorempixel.com/200/200/sports/">
+                    <div class="content">
+                      <a class="header">Victory</a>
+                      <div class="description">Dark horse wins the race</div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="right floated content">
+                      <div class="ui button">
+                        <i class="remove icon"></i>
+                        Remove
+                      </div>
+                    </div>
+                    <img class="ui avatar image" src="http://lorempixel.com/200/200/sports/">
+                    <div class="content">
+                      <a class="header">The final</a>
+                      <div class="description">A tight race to the finish</div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
 
-          <div class="ui segment">
-            <div class="ui header">
-              Main event
-            </div>
-            <form class="ui form">
-              <div id="main-event" class="ui list">
-                <div class="item">
-                  <div class="right floated content">
-                    <div class="ui button">
-                      <i class="remove icon"></i>
-                      Remove
-                    </div>
-                  </div>
-                  <img class="ui avatar image" src="http://lorempixel.com/200/200">
-                  <div class="content">
-                    <a class="header">We lost</a>
-                    <div class="description">Our favorite team: Crushed</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="right floated content">
-                    <div class="ui button">
-                      <i class="remove icon"></i>
-                      Remove
-                    </div>
-                  </div>
-                  <img class="ui avatar image" src="http://lorempixel.com/200/200">
-                  <div class="content">
-                    <a class="header">Despair</a>
-                    <div class="description">Players collapse</div>
-                  </div>
-                </div>
+            <div class="item">
+              <div class="ui header list-header">
+                Main event
               </div>
-            </form>
+              <form class="ui form">
+                <div id="main-event" class="ui list">
+                  <div class="item">
+                    <div class="right floated content">
+                      <div class="ui button">
+                        <i class="remove icon"></i>
+                        Remove
+                      </div>
+                    </div>
+                    <img class="ui avatar image" src="http://lorempixel.com/200/200">
+                    <div class="content">
+                      <a class="header">We lost</a>
+                      <div class="description">Our favorite team: Crushed</div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="right floated content">
+                      <div class="ui button">
+                        <i class="remove icon"></i>
+                        Remove
+                      </div>
+                    </div>
+                    <img class="ui avatar image" src="http://lorempixel.com/200/200">
+                    <div class="content">
+                      <a class="header">Despair</a>
+                      <div class="description">Players collapse</div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
