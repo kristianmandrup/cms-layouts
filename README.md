@@ -1,6 +1,8 @@
 CMS UI
 ------
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kristianmandrup/cms-layouts.svg)](https://greenkeeper.io/)
+
 ### Install
 
 Install [Node 4.0](https://nodejs.org/en/download/) or higher
